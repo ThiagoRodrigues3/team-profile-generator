@@ -28,7 +28,7 @@ test('Return valid Manager email', () => {
 });
 
 test('Return inputted Manager email', () => {
-    expect(manage.getEmail()).toBe('testemail@testdomain.com');
+    expect(manage.getEmail()).toBe('foo@bar.com');
 });
 
 // * Number Test
