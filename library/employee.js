@@ -1,13 +1,17 @@
 // Employee Class 
 class Employee {
-    constructor(name, id, email) {
-        this.name = name
+    constructor(firstName, lastName, id, email) {
+        this.firstName = firstName
+        this.lastName = lastName
         this.id = id
         this.title = "Employee"
         this.email = email
     }
-    getName() {
-        return this.name
+    getFirstName() {
+        return this.firstName
+    }
+    getLastName() {
+        return this.lastName
     }
     getId() {
         return this.id

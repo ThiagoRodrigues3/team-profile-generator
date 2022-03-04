@@ -2,8 +2,8 @@ const Employee = require('./employee')
 
 class Manager extends Employee {
 
-    constructor(name, id, email, officeNum) {
-        super(name, id, email)
+    constructor(firstName, lastName, id, email, officeNum) {
+        super(firstName, lastName, id, email)
         this.officeNum = officeNum
         this.title = "Manager"
 

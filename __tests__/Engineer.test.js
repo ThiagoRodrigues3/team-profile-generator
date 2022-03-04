@@ -1,14 +1,23 @@
 const Engineer = require("../library/engineer");
-const eng = new Engineer("foo", "1234", "foo@bar.com", 'gitFoobar');
+const eng = new Engineer("foo","bar", "1234", "foo@bar.com", 'gitFoobar');
 
-// * Name Test
-test('Return valid engineer name', () => {
-    expect(eng.name).not.toBe('');
-    expect(eng.name).toEqual(expect.any(String));
-    expect(eng.name).toEqual('foo');
+// * First Name test
+test('Return valid employee first name', () => {
+    expect(eng.firstName).not.toBe('');
+    expect(eng.firstName).toEqual('foo');
+    expect(eng.firstName).toEqual(expect.any(String));
 });
-test('Return engineer name', () => {
-    expect(eng.getName()).toBe(eng.name);
+test('Return entered employee first name', () => {
+    expect(eng.getFirstName()).toBe(eng.firstName);
+});
+// * Last Name test
+test('Return valid employee last name', () => {
+    expect(eng.lastName).not.toBe('');
+    expect(eng.lastName).toEqual('bar');
+    expect(eng.lastName).toEqual(expect.any(String));
+});
+test('Return entered employee last name', () => {
+    expect(eng.getLastName()).toBe(eng.lastName);
 });
 
 // * ID Test

@@ -1,14 +1,23 @@
 const Employee = require('../library/employee');
-const e = new Employee("foo", '12', "foo@bar.com");
+const e = new Employee("foo","bar", '12', "foo@bar.com");
 
-// * Name test
-test('Return valid employee name', () => {
-    expect(e.name).not.toBe('');
-    expect(e.name).toEqual('foo');
-    expect(e.name).toEqual(expect.any(String));
+// * First Name test
+test('Return valid employee First name', () => {
+    expect(e.firstName).not.toBe('');
+    expect(e.firstName).toEqual('foo');
+    expect(e.firstName).toEqual(expect.any(String));
 });
-test('Return entered employee name', () => {
-    expect(e.getName()).toBe(e.name);
+test('Return entered employee First name', () => {
+    expect(e.getFirstName()).toBe(e.firstName);
+});
+// * Last Name test
+test('Return valid employee Last name', () => {
+    expect(e.lastName).not.toBe('');
+    expect(e.lastName).toEqual('bar');
+    expect(e.lastName).toEqual(expect.any(String));
+});
+test('Return entered employee Last name', () => {
+    expect(e.getLastName()).toBe(e.lastName);
 });
 
 // * ID Test

@@ -1,14 +1,23 @@
 const Manager = require("../library/manager")
-const manage = new Manager('foo', '12', 'foo@bar.com', '1234')
+const manage = new Manager('foo', 'bar', '12', 'foo@bar.com', '1234')
 
-// * Name Test
-test('Return valid Manager name', () => {
-    expect(manage.name).toEqual('foo');
-    expect(manage.name).not.toBe('');
-    expect(manage.name).toEqual(expect.any(String));
+// * First Name test
+test('Return valid employee First name', () => {
+    expect(manage.firstName).not.toBe('');
+    expect(manage.firstName).toEqual('foo');
+    expect(manage.firstName).toEqual(expect.any(String));
 });
-test('Return Manager name', () => {
-    expect(manage.getName()).toBe('foo');
+test('Return entered employee First name', () => {
+    expect(manage.getFirstName()).toBe(manage.firstName);
+});
+// * Last Name test
+test('Return valid employee Last name', () => {
+    expect(manage.lastName).not.toBe('');
+    expect(manage.lastName).toEqual('bar');
+    expect(manage.lastName).toEqual(expect.any(String));
+});
+test('Return entered employee Last name', () => {
+    expect(manage.getLastName()).toBe(manage.lastName);
 });
 
 // * ID Test
